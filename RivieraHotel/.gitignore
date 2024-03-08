@@ -1,0 +1,14 @@
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyz
+*.pyzw
+pip-log.txt
+*.log
+
+
+venv/
