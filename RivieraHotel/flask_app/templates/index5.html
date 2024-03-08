@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from duruthemes.com/demo/html/cappa/demo2-light/index5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Mar 2024 22:02:32 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Riviera Luxury Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3jM81P6LkQk7BmqB8/UMHNOigphP8q2G5KcgkV4DANbjCayTb+U5NRy6TfT0nB3FyEvAMm4l2v2My/YM5Kgo+w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3jM81P6LkQk7BmqB8/UMHNOigphP8q2G5KcgkV4DANbjCayTb+U5NRy6TfT0nB3FyEvAMm4l2v2My/YM5Kgo+w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap">
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/YouTubePopUp.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vegas.slider.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/select2.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/datepicker.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="logo" style="text-decoration: none;" href="/">
+                    <h2>RIVIERA <span>Luxury Hotel</span></h2>
+                </a>
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Home <i class="fas fa-angle-down"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#rooms" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Rooms & Suites </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/restaurant">Restaurant</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/spa">Spa</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Careers </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto ">{% if 'user_id' not in session %}
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/login ">Login</a>
+
+                    </li>
+                    {% else %}
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/logout ">Logout</a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/profile ">Profile</a>
+
+                    </li>
+                    {% endif %}
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Video -->
+    <header class="header ">
+        <div class="video-fullscreen-wrap ">
+            <!-- The opacity on the image is made with "data-overlay-dark="number" . You can change it using the numbers 0-9. -->
+            <div class="video-fullscreen-wrap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
+                <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+                <div class="video-fullscreen-video" data-overlay-dark="6">
+                    <video playsinline="" autoplay="" loop="" muted="" style="width: 100%; height: 100%;">
+                    <source src="https://duruthemes.com/demo/html/cappa/video.mp4" type="video/mp4" autoplay="" loop="" muted="">
+                    <source src="https://duruthemes.com/demo/html/cappa/video.webm" type="video/webm" autoplay="" loop="" muted="">
+                </video>
+                </div>
+                <div class="v-middle caption overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+                                <h4>Luxury Hotel & Best Resort</h4>
+                                <h1>Enjoy a Luxury Experience</h1>
+                                <div class="butn-dark">
+                                    <a href="#rooms">
+                                        <span>Rooms & Suites</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider reservation -->
+            <div class="reservation" style="text-decoration: none;">
+                <a style="text-decoration: none;" href="tel:8551004444">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="flaticon-call"></i>
+                    </div>
+                    <div class="call" style="text-decoration: none;"><span>855 100 4444</span>
+                        <br style="text-decoration: none;">Reservation</div>
+                </a>
+            </div>
+
+            <div class="arrow bounce text-center">
+                <a href="#" data-scroll-nav="1" class=""> <i class="ti-arrow-down"></i> </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- About -->
+    <section class="about section-padding" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>
+                        <i class="star-rating"></i>
+                        <i class="star-rating"></i>
+                        <i class="star-rating"></i>
+                        <i class="star-rating"></i>
+                        <i class="star-rating"></i>
+                    </span>
+                    <div class="section-subtitle">Riviera Luxury Hotel</div>
+                    <div class="section-title">Enjoy a Luxury Experience</div>
+                    <p>I pozicionuar në qëndër të Tiranës, brenda zonës ideale tregtare edhe të biznesit, vetëm 3 minuta nga Parlamenti i Shqipërisë, Galerisë Kombëtare të Arteve, Operas dhe Baletit dhe Teatrit të Ansamblit Popullor, Maritim Hotel Plaza
+                        Tirana është hoteli më i ri ndërkombëtar me 5 yje.Rivira Delux Hotel Tirana është gjithashtu një destinacion për adhuruesit e ushqimit: Tre restorantet tona – PANEVINO, CONVIVIUM dhe SAVOR – ofrojnë zgjedhje të cilat u përshtaten
+                        të gjitha shijeve tuaja
+                    </p>
+                    <!-- call -->
+                    <div class="reservations">
+                        <div class="icon"><span class="flaticon-call"></span></div>
+                        <div class="text">
+                            <p>Reservation</p> <a href="tel:855-100-4444" style="text-decoration: none;">855 100 4444</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <img src="../static/images/rooms/8.jpg" alt="" class="mt-90 mb-30">
+                </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <img src="../static/images/rooms/2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {% if 'user_id' in session and user['role'] == 'admin' %}
+    <a href="/categories/new" style="display: inline-block; padding: 10px 20px; background-color: rgb(255, 129, 3); color: white; text-decoration: none; border-radius: 5px;">CREATE A NEW CATEGORY</a> {% endif %}
+    <section class="rooms1 section-padding bg-cream" data-scroll-index="1" id="rooms">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-subtitle">The Cappa Luxury Hotel</div>
+                    <div class="section-title">Rooms & Suites</div>
+                </div>
+            </div>
+            <div class="row">
+                {% for category in categories %}
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='categoryimages/' + category.image_path) }}" alt=""> </div>
+                        <span class="category"><a href=""style="text-decoration: none;">Book</a></span>
+                        <div class="con">
+                            <h6><a href="" style="text-decoration: none;">{{ category.price }}$ / Night</a></h6>
+                            <h5><a href="" style="text-decoration: none;">{{ category.name }}</a></h5>
+                            <div class="line"></div>
+                            <div class="row facilities">
+                                <div class="col col-md-7">
+                                    <ul>
+                                        <li><i class="flaticon-bed"></i></li>
+                                        <li><i class="flaticon-bath"></i></li>
+                                        <li><i class="flaticon-breakfast"></i></li>
+                                        <li><i class="flaticon-towel"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="col col-md-5 text-end">
+                                    <div class="permalink"><a href="/category/{{category.id}}">Details <i class="ti-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Promo Video -->
+    <!-- Facilties -->
+    <section class="facilties section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-subtitle">Our Services</div>
+                    <div class="section-title">Hotel Facilities</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-world"></span>
+                        <h5>Pick Up & Drop</h5>
+                        <p>We’ll pick up from airport while you comfy on your ride, mus nellentesque habitant.</p>
+                        <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-car"></span>
+                        <h5>Parking Space</h5>
+                        <p>Fusce tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+                        <div class="facility-shape"> <span class="flaticon-car"></span> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-bed"></span>
+                        <h5>Room Service</h5>
+                        <p>Room tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+                        <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-swimming"></span>
+                        <h5>Swimming Pool</h5>
+                        <p>Swimming pool tincidunt nise ace park norttito sit space, mus nellentesque habitant.</p>
+                        <div class="facility-shape"> <span class="flaticon-swimming"></span> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-wifi"></span>
+                        <h5>Fibre Internet</h5>
+                        <p>Wifi tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+                        <div class="facility-shape"> <span class="flaticon-wifi"></span> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                        <span class="flaticon-breakfast"></span>
+                        <h5>Breakfast</h5>
+                        <p>Eat tincidunt nisa ace park norttito sit amet space, mus nellentesque habitant</p>
+                        <div class="facility-shape"> <span class="flaticon-breakfast"></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testiominals -->
+    {% if 'user_id' in session %}
+    <a href="/reviews/new" style="display: inline-block; padding: 10px 20px; background-color: rgb(255, 129, 3); color: white; text-decoration: none; border-radius: 5px;">LEAVE YOUR FEEDBACK</a> {% endif %}
+
+    <section class="testimonials">
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="../static/images/slider/2.jpg" data-overlay-dark="3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="testimonials-box">
+                            <div class="head-box">
+                                <h6>Testimonials</h6>
+                                <h4>What Client's Say?</h4>
+                                <div class="line"></div>
+                            </div>
+                            <div class="owl-carousel owl-theme">
+                                {% for review in reviews %}
+                                <div class="item">
+                                    <span class="quote"><img src="img/quot.png" alt=""></span>
+                                    <p>{{ review.comment }}</p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="../static/images/team/4.jpg" alt=""> </div>
+                                        <div class="cont"> <span><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
+                                            <h6>{{ review.first_name }} {{ review.last_name }}</h6> <span>Guest review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% if 'user_id' in session and user['role'] == 'admin' %}
+    <a href="/services/new" style="display: inline-block; padding: 10px 20px; background-color: rgb(255, 129, 3); color: white; text-decoration: none; border-radius: 5px;">ADD NEW SERVICES</a> {% endif %}
+
+
+
+    <section class="services section-padding">
+        <div class="container">
+            {% for service in services %}
+            <div class="row">
+                {% if loop.index is divisibleby(2) %}
+                <div class="col-md-6 p-0 order2 bg-cream valign animate-box" data-animate-effect="fadeInLeft">
+                    <div class="content">
+                        <div class="cont text-left">
+                            <div class="info">
+                                <h6>{{ service.category }}</h6>
+                            </div>
+                            <h4>{{ service.name }}</h4>
+                            <p>{{ service.description }}</p>
+                            <div class="butn-dark"> <a href="{{ service.link }}"><span>Learn More</span></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
+                    <div class="img">
+                        <a href="{{ service.link }}">
+                            <img src="{{ url_for('static', filename='categoryimages/' + service.services_photo) }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
+                    <div class="img">
+                        <a href="{{ service.link }}">
+                            <img src="{{ url_for('static', filename='categoryimages/' + service.services_photo) }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
+                    <div class="content">
+                        <div class="cont text-left">
+                            <div class="info">
+                                <h6>{{ service.category }}</h6>
+                            </div>
+                            <h4>{{ service.name }}</h4>
+                            <p>{{ service.description }}</p>
+                            <div class="butn-dark"><a href="servicedetails/{{service.id}}"><span>Learn More</span></a> </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+
+    <!-- Clients -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Hotel</h3>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+
+                            <div class="footer-language"> <i class="lni ti-world"></i>
+                                <select onchange="location = this.value;">
+                                    <option value="http://duruthemes.com/">English</option>
+                                    <option value="http://duruthemes.com/">German</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Explore</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rooms.html">Rooms & Suites</a></li>
+                                <li><a href="restaurant.html">Restaurant</a></li>
+                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">1616 Broadway NY, New York 10001<br>United States of America</p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 855 100 4444</p>
+                                <p class="footer-contact-mail">info@luxuryhotel.com</p>
+                            </div>
+                            <div class="footer-about-social-list">
+                                <a href="#"><i class="ti-instagram"></i></a>
+                                <a href="#"><i class="ti-twitter"></i></a>
+                                <a href="#"><i class="ti-youtube"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                            <p class="footer-bottom-copy-right">© Copyright 2022 by <a href="#">DuruThemes.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.isotope.v3.0.2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pace.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrollIt.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/YouTubePopUp.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/select2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/datepicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smooth-scroll.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</body>

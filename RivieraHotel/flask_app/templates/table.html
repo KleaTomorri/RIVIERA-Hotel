@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <style>
+        /* Custom styles for form */
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9fafb;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        input[type="date"],
+        input[type="time"],
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #af4ca8;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #621486;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center text-2xl mb-6">Book Table</h2>
+        <form id="bookingForm" action="/book_table" method="post">
+            <label for="date" class="block mb-2">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time" class="block mb-2 mt-4">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="firstName" class="block mb-2 mt-4">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName" class="block mb-2 mt-4">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="emaiL" class="block mb-2 mt-4">Email:</label>
+            <input type="email" id="emaiL" name="emaiL" required>
+
+            <input type="submit" value="Book" class="mt-6">
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function showConfirmationPopup() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank You!',
+                text: 'Your booking was confirmed. You will receive your booking details in your email.',
+                confirmButtonText: 'OK'
+            });
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Your form submission logic here (e.g., AJAX request)
+
+            showConfirmationPopup();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding-top: 100px;
+        }
+        
+        h1 {
+            color: #28a745;
+            text-align: center;
+        }
+        
+        .form-control {
+            border-radius: 20px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 20px;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+        
+        .text-danger {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="email" class="form-control" id="emailLogin"> {% with messages = get_flashed_messages(category_filter=["emailLogin"]) %} {% if messages %} {% for message in messages %}
+                <p class="text-danger">{{ message }}</p>
+                {% endfor %} {% endif %} {% endwith %}
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="passwordLogin"> {% with messages = get_flashed_messages(category_filter=["passwordLogin"]) %} {% if messages %} {% for message in messages %}
+                <p class="text-danger">{{ message }}</p>
+                {% endfor %} {% endif %} {% endwith %}
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="register-link">
+                <a href="/register">Don't have an account? Register here.</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

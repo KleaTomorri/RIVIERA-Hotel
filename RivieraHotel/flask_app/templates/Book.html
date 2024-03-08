@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Details</title>
+</head>
+
+<body>
+    <h1>Booking Details</h1>
+
+    <!-- Display room category details -->
+    <h2>Room Category Details</h2>
+    <p>Name: {{ room_category.name }}</p>
+    <p>Price: ${{ room_category.price }}</p>
+    <!-- Display photo and description if available -->
+    <img src="{{ room_category.photo }}" alt="Room Photo">
+    <p>Description: {{ room_category.description }}</p>
+
+    <!-- Form to select room -->
+    <form action="/select_room" method="POST">
+        <input type="hidden" name="room_category_id" value="{{ room_category.id }}">
+        <button type="submit">Select Room</button>
+    </form>
+
+    <!-- Next button to proceed to extras selection -->
+    <a href="/extras">Next</a>
+</body>
+
+</html>

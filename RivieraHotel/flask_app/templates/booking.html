@@ -1,0 +1,34 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Page</title>
+</head>
+
+<body>
+    <h1>Booking Page</h1>
+    <form action="/booking" method="POST">
+        <select name="selected_room">
+            {% for category in categories %}
+                <optgroup label="{{ category.name }}">
+                    {% for room in category.rooms %}
+                        <option value="{{ room.id }}">{{ room.name }} - ${{ room.price }}</option>
+                    {% endfor %}
+                </optgroup>
+            {% endfor %}
+        </select>
+        <fieldset>
+            <legend>Extras</legend>
+            {% for category in categories %} {% for extra in category.extras %}
+            <label>
+                        <input type="checkbox" name="selected_extras" value="{{ extra.id }}">
+                        {{ extra.name }} - ${{ extra.price }}
+                    </label><br> {% endfor %} {% endfor %}
+        </fieldset>
+        <button type="submit">Next</button>
+    </form>
+</body>
+
+</html>
